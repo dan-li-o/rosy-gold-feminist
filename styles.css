@@ -1,0 +1,344 @@
+/* Core rosy-gold palette and layout variables */
+:root {
+  --color-background: #FAF9F7;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F5EAE8;
+  --color-text: #2E1F27;
+  --color-muted: #73545D;
+  --color-accent: #A55A66;
+  --color-highlight: #C8A97E;
+  --color-gold: #D8B26E;
+  --color-outline: #E4DDD7;
+  --max-width: 960px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Source Serif 4', 'Source Serif Pro', Georgia, serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--color-highlight);
+}
+
+/* Replace the hero background image URL with your own symbolic photography */
+.hero {
+  position: relative;
+  padding: 7rem 1.5rem 6rem;
+  text-align: center;
+  background: linear-gradient(
+      rgba(250, 249, 247, 0.82),
+      rgba(250, 249, 247, 0.96)
+    ),
+    url('https://medlineplus.gov/images/AssistedReproductiveTechnology_share.jpg')
+      center/cover no-repeat;
+}
+
+.hero__content {
+  margin: 0 auto;
+  max-width: 720px;
+}
+
+.hero__kicker {
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.hero__title {
+  margin: 0.75rem 0 0.5rem;
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  color: var(--color-text);
+}
+
+.hero__lead {
+  margin: 0 auto 1.5rem;
+  font-size: 1.15rem;
+  color: var(--color-text);
+}
+
+.hero__cta {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-gold));
+  color: var(--color-surface);
+  box-shadow: 0 12px 28px rgba(165, 90, 102, 0.28);
+}
+
+.hero__cta:hover,
+.hero__cta:focus-visible {
+  background: var(--color-highlight);
+  color: var(--color-text);
+}
+
+.site-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+  padding: 1rem 1.5rem;
+  background-color: var(--color-surface-alt);
+  border-top: 1px solid var(--color-outline);
+  border-bottom: 1px solid var(--color-outline);
+}
+
+.site-nav a {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: var(--color-accent);
+}
+
+main {
+  padding-bottom: 4rem;
+}
+
+.section {
+  max-width: var(--max-width);
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+}
+
+.section__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.section__header h2 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--color-accent);
+  border-bottom: 2px solid var(--color-gold);
+  padding-bottom: 0.4rem;
+}
+
+.section__tag {
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.section__subtitle {
+  margin: 3rem 0 1.5rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--color-accent);
+}
+
+.section__link {
+  display: inline-block;
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+.section__note {
+  margin-top: 2rem;
+  font-style: italic;
+  color: var(--color-muted);
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.about__text {
+  flex: 2;
+  min-width: 260px;
+}
+
+.about__portrait {
+  flex: 1;
+  min-width: 220px;
+  margin: 0;
+  text-align: center;
+}
+
+.about__portrait img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 50%;
+  border: 3px solid var(--color-outline);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.books {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.book {
+  background: var(--color-surface);
+  border: 1px solid var(--color-outline);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(216, 178, 110, 0.18);
+}
+
+.book__cover {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+}
+
+.book__details {
+  padding: 1.5rem;
+}
+
+.book__title {
+  margin: 0 0 0.4rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.book__meta {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.book__summary {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.grid--two {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-outline);
+  border-radius: 12px;
+  padding: 1.75rem;
+  box-shadow: 0 6px 18px rgba(200, 169, 126, 0.14);
+  border-top: 4px solid rgba(216, 178, 110, 0.35);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.media-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.media-list__meta {
+  display: block;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 0.35rem;
+}
+
+.media-list__title {
+  font-family: 'Playfair Display', serif;
+}
+
+.media-list__desc {
+  display: block;
+  margin-top: 0.2rem;
+}
+
+.contact {
+  display: grid;
+  gap: 1rem;
+  font-size: 1.05rem;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  border-top: 1px solid var(--color-outline);
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  background-color: var(--color-surface-alt);
+}
+
+.site-footer a {
+  font-weight: 600;
+}
+
+/* Scroll reveal animation */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 600ms ease var(--reveal-delay, 0s),
+    transform 600ms ease var(--reveal-delay, 0s);
+  will-change: opacity, transform;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  [data-reveal].is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 5rem 1.5rem 4rem;
+  }
+
+  .site-nav {
+    gap: 1rem;
+  }
+
+  .section {
+    margin: 3rem auto;
+  }
+}
