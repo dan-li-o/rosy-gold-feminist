@@ -2,6 +2,8 @@
 
 A single-page HTML template that showcases the work of a feminist scholar in a rosy-gold palette. The layout highlights biography, featured works, research themes, media appearances, and mentorship opportunities in a warm, editorial style.
 
+Live preview: https://dan-li-o.github.io/rosy-gold-feminist/
+
 ## Getting Started
 
 1. Make sure you have a free GitHub account (the walkthrough below shows every click).
@@ -86,6 +88,7 @@ Open `index.html` in any text editor and move through the sections in order:
 - **External links:** Replace sample URLs (e.g., newsletter signup, talk recordings, publication archive) with live destinations, if you need them.
 - **Sections:** Duplicate or remove the provided sections to match your scholar's priorities. Each section is self-contained for easy rearranging.
 - **Animations:** Tweak or remove the `data-reveal` attributes in `index.html`, or set custom delays with `data-reveal-delay="0.1s"` to fine-tune the scroll cadence.
+- **AI assist:** You can paste any of the files into an AI assistant (ChatGPT, Claude, etc.) and ask for rewrite suggestions, color swaps, or new section ideas—then apply the suggested edits manually.
 
 ## Update & Maintenance
 
